@@ -1,1 +1,1 @@
-web: npm run start-env
+web: cd .next/standalone && node server.js
