@@ -15,7 +15,7 @@
     "build": "npm-run-all check-env build-db check-db build-tracker build-geo build-app",
     "heroku-postbuild": "npm-run-all build-db build-tracker build-geo build-app heroku-setup-standalone heroku-cleanup",
     "heroku-setup-standalone": "cp -r public .next/standalone/ && cp -r .next/static .next/standalone/.next/ && cp -r geo .next/standalone/",
-    "heroku-cleanup": "rm -rf node_modules src .next/cache .next/server .next/types cypress scripts prisma/migrations",
+    "heroku-cleanup": "rm -rf src/app src/components src/assets src/hooks src/lib/clickhouse.ts .next/cache .next/server .next/types cypress",
     "start": "next start",
     "build-docker": "npm-run-all build-db build-tracker build-geo build-app",
     "start-docker": "npm-run-all check-db update-tracker start-server",
